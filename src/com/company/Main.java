@@ -1,12 +1,14 @@
 package com.company;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
 	int temp = 5;
 	int age = 20;
         System.out.println(nameofmetod(temp,age));
-        System.out.println(nameofmetod(15,16));
+        System.out.println(generateRandomAge() + nameofmetod(generateRandomAge(),16));
         System.out.println(nameofmetod(24,19));
         System.out.println(nameofmetod(-35,12));
         System.out.println(nameofmetod(26,51));
@@ -24,4 +26,19 @@ public class Main {
         }else
             return "остовайся дома";
     }
+    public static int generateRandomAge(){
+Random random = new Random();
+int randomage = random.nextInt(100);
+return randomage;
+    }
 }
+
+
+
+
+
+
+
+
+
+
